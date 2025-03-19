@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/backButtonsettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/baseline_arrow_back_24"
+        android:background="@color/transpa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="0dp"/>
+
+    <!-- Header Text -->
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textSize="23sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@id/backButtonsettings"
+        app:layout_constraintTop_toTopOf="@id/backButtonsettings"
+        app:layout_constraintBottom_toBottomOf="@id/backButtonsettings"
+        app:layout_constraintVertical_bias="0.5"
+        android:layout_marginStart="-39dp"/>
+
+    <!-- Edit Profile Button -->
+    <Button
+        android:id="@+id/editProfileBtn"
+        android:layout_width="365dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/profile_edit__icon"
+        android:drawablePadding="8dp"
+        android:paddingStart="13dp"
+        android:text="Edit Profile"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerText" />
+
+    <!-- My Addresses Button -->
+
+    <Button
+        android:id="@+id/addressesBtn"
+        android:layout_width="365dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/location_navigation_pointer_icon"
+        android:drawablePadding="8dp"
+        android:paddingStart="13dp"
+        android:text="My Addresses"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editProfileBtn" />
+
+    <!-- Notification Settings Button -->
+    <Button
+        android:id="@+id/notificationBtn"
+        android:layout_width="365dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/baseline_notifications_24"
+        android:drawablePadding="8dp"
+        android:paddingStart="13dp"
+        android:text="Notification Settings"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addressesBtn" />
+
+    <!-- Community Rules Button -->
+    <Button
+        android:id="@+id/communityRulesBtn"
+        android:layout_width="365dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/icon_community_rules"
+        android:drawablePadding="8dp"
+        android:paddingStart="13dp"
+        android:text="Community Rules"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notificationBtn" />
+
+    <!-- Help Centre Button -->
+    <Button
+        android:id="@+id/helpCentreBtn"
+        android:layout_width="365dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/helps_chats_icon"
+        android:drawablePadding="8dp"
+        android:paddingStart="13dp"
+        android:text="Help Centre"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/communityRulesBtn" />
+
+    <!-- About Us Button -->
+    <Button
+        android:id="@+id/aboutUsBtn"
+        android:layout_width="365dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/about_icon"
+        android:drawablePadding="8dp"
+        android:paddingStart="13dp"
+        android:text="About Us"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/helpCentreBtn" />
+
+    <!-- Request Account Deletion Button -->
+    <Button
+        android:id="@+id/requestAccountDeletionBtn"
+        android:layout_width="365dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/delete_remove__user_icon"
+        android:drawablePadding="8dp"
+        android:paddingStart="13dp"
+        android:text="Request Account Deletion"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aboutUsBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

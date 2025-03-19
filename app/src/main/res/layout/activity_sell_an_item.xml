@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".marketplace.SellAnItem">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/backbtnprof"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/transpa"
+            android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
+            android:paddingLeft="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- New Listing Text -->
+        <TextView
+            android:id="@+id/newListing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-25dp"
+            android:layout_marginTop="8dp"
+            android:text="New Listing"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/backbtnprof"
+            app:layout_constraintTop_toTopOf="@id/backbtnprof" />
+
+        <!-- Item Image Button -->
+        <Button
+            android:id="@+id/item_image"
+            android:layout_width="350dp"
+            android:layout_height="115dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button1"
+            android:elevation="5dp"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newListing" />
+
+        <!-- ImageView for Icon -->
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newListing" />
+
+        <!-- Upload Button -->
+        <Button
+            android:id="@+id/upload_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/transpa"
+            android:drawableLeft="@drawable/upload_image"
+            android:fontFamily="@font/poppins_reg"
+            android:text="Upload Image"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_image" />
+
+        <!-- Product Name EditText -->
+        <EditText
+            android:id="@+id/prod_Name"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/filloutbg"
+            android:elevation="5dp"
+            android:hint="Product Name"
+            android:paddingLeft="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/upload_btn" />
+
+        <!-- Price EditText -->
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/filloutbg"
+            android:elevation="5dp"
+            android:hint="Price"
+            android:paddingLeft="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/prod_Name" />
+
+        <!-- Category Selection (Modified) -->
+        <RelativeLayout
+            android:id="@+id/itemCategory"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/filloutbg"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/price">
+
+            <!-- Button to Trigger Spinner -->
+            <Button
+                android:id="@+id/categoryButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Select Category"
+                android:paddingLeft="25dp"
+                android:background="@android:color/transparent"
+                android:textColor="@color/black"
+                android:gravity="start|center_vertical"
+                android:drawableEnd="@drawable/baseline_arrow_drop_down_24" />
+
+            <!-- Spinner (Hidden but clickable) -->
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/category_options"
+                android:visibility="invisible"
+                android:background="@android:color/transparent" />
+        </RelativeLayout>
+
+        <!-- Description EditText -->
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/filloutbg"
+            android:elevation="5dp"
+            android:hint="Description"
+            android:paddingLeft="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemCategory" />
+
+        <!-- Condition EditText -->
+        <EditText
+            android:id="@+id/condition"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/filloutbg"
+            android:elevation="5dp"
+            android:hint="Condition"
+            android:paddingLeft="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <!-- Location LinearLayout -->
+        <LinearLayout
+            android:id="@+id/item_location"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/filloutbg"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/condition">
+
+            <EditText
+                android:id="@+id/market_Location"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Location"
+                android:paddingLeft="25dp" />
+
+            <Button
+                android:id="@+id/editLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transpa"
+                android:text="Edit"
+                android:textColor="#1383B4" />
+        </LinearLayout>
+
+        <!-- Confirm Button -->
+        <Button
+            android:id="@+id/confirm_sell_item_btn"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button2"
+            android:elevation="10dp"
+            android:text="Confirm"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_location" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Header Section -->
+            <TextView
+                android:id="@+id/hiusername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/dm_sans"
+                android:padding="7dp"
+                android:text="fretxjsojw!"
+                android:textColor="@color/primary_color"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/notificationBtn"
+                android:layout_width="45dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/transpa"
+                android:scaleType="fitCenter"
+                android:src="@drawable/baseline_notifications_24"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/locationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="118dp"
+                android:layout_marginStart="5dp"
+                android:paddingLeft="53dp"
+                android:text="Fetching location..."
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Sub-header Section -->
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="30dp"
+                android:text="Ready to make a sustainable impact today?"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/dmsans_reg"
+                app:layout_constraintTop_toBottomOf="@+id/hiusername"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/locationpin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="18dp"
+                android:src="@drawable/baseline_location_pin_24"
+                android:backgroundTint="@color/transpa"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Category Section -->
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:paddingLeft="30dp"
+                android:text="Category"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/dm_sans"
+                app:layout_constraintTop_toBottomOf="@+id/locationpin"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Buttons Section -->
+            <ImageButton
+                android:id="@+id/marketplacebutton"
+                android:layout_width="341dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/marketplacecat"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/category" />
+
+            <ImageButton
+                android:id="@+id/recylinghubbutton"
+                android:layout_width="341dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/recyclingcat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/marketplacebutton" />
+
+            <ImageButton
+                android:id="@+id/cleanupbtn"
+                android:layout_width="339dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/cleanupcat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recylinghubbutton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

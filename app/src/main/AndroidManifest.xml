@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> <!-- Firebase permissions -->
+    <uses-permission android:name="com.google.android.c2dm.permission.SEND" />
+
+    <permission
+        android:name="com.capstone.ecorecyc.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.capstone.ecorecyc.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ecorecyc"
+        tools:targetApi="31">
+        <activity
+            android:name=".junkshop.AddRecyclablePrice"
+            android:exported="false" />
+
+        <meta-data
+            android:name="MAPBOX_ACCESS_TOKEN"
+            android:value="YOUR_MAPBOX_ACCESS_TOKEN" />
+
+        <activity
+            android:name=".junkshop.JunkshopSetupProfile2"
+            android:exported="false" />
+        <activity
+            android:name=".junkshop.JunkshopSetupProfile1"
+            android:exported="false" /> <!-- Junkshop Related Activities -->
+        <activity
+            android:name=".junkshop.JunkShopChat"
+            android:exported="false" />
+        <activity
+            android:name=".junkshop.JunkShopNotification"
+            android:exported="false" />
+        <activity
+            android:name=".junkshop.JunkShopDashboard"
+            android:exported="false" /> <!-- Firebase Cloud Messaging Service -->
+        <service
+            android:name=".notifications.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- Other Activities -->
+        <activity
+            android:name=".maps.Maps"
+            android:exported="false" />
+        <activity
+            android:name=".orders.MyListings"
+            android:exported="false" />
+        <activity
+            android:name=".orders.MyOrders"
+            android:exported="false" />
+        <activity
+            android:name=".notifications.Notifications"
+            android:exported="false" />
+        <activity
+            android:name=".settings.Settings"
+            android:exported="true" /> <!-- Main Activity (Launcher with Splash) -->
+        <activity
+            android:name=".login.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Login & Registration Activities -->
+        <activity
+            android:name=".login.Login"
+            android:exported="true" />
+        <activity
+            android:name=".login.Register"
+            android:exported="true" />
+        <activity
+            android:name=".login.ForgotPassword"
+            android:exported="true" /> <!-- ChooseRole Activity (launched only from Register) -->
+        <activity
+            android:name=".chooserole.ChooseRole"
+            android:exported="false" /> <!-- Other Activities -->
+        <activity
+            android:name=".Chat"
+            android:exported="true" />
+        <activity
+            android:name=".cart.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cart.ItemDetails"
+            android:exported="false" />
+        <activity
+            android:name=".marketplace.PlaceOrder"
+            android:exported="true" />
+        <activity
+            android:name=".MainNavigation"
+            android:exported="false"
+            android:theme="@style/Theme.Ecorecyc" />
+        <activity
+            android:name=".profile.EditProfile"
+            android:exported="true" />
+        <activity
+            android:name=".UserProfile"
+            android:exported="true" />
+        <activity
+            android:name=".Dashboard"
+            android:exported="true" />
+        <activity
+            android:name=".marketplace.Marketplace"
+            android:exported="true" />
+        <activity
+            android:name=".marketplace.SellAnItem"
+            android:exported="true" />
+        <activity
+            android:name=".cleanup.CleanupEvents"
+            android:exported="true" />
+        <activity
+            android:name=".cleanup.OrganizeCleanupEvent"
+            android:exported="true" />
+        <activity
+            android:name=".cleanup.VolunteerCleanupEvent"
+            android:exported="true" />
+        <activity
+            android:name=".recyclinghub.RecyclingHub"
+            android:exported="true" />
+        <activity
+            android:name=".dashboard.Navbar"
+            android:exported="true" />
+    </application>
+
+</manifest>

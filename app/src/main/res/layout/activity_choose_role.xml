@@ -1,0 +1,125 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff">
+
+    <ImageView
+        android:id="@+id/loginLogo"
+        android:layout_width="267dp"
+        android:layout_height="247dp"
+        android:src="@drawable/logo_orig"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/choose_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="Choose Your Role"
+        android:textColor="@color/primary_color"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/loginLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/radio_user"
+        android:layout_width="300dp"
+        android:layout_height="130dp"
+        android:background="@drawable/green_outline_light_background"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/choose_role"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/user_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="Users"
+        android:textColor="#0E983D"
+        android:textSize="20dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="@id/radio_user"
+        app:layout_constraintStart_toStartOf="@id/radio_user" />
+
+    <ImageView
+        android:id="@+id/user_icon"
+        android:layout_width="55dp"
+        android:layout_height="60dp"
+        android:src="@drawable/img_2"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@id/user_text"
+        app:layout_constraintStart_toStartOf="@id/radio_user" />
+
+    <TextView
+        android:id="@+id/user_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_reg"
+        android:text="Sell second-hand items, find\nrecyclables and join clean-up\nevents to promote sustainability"
+        android:textColor="#0E983D"
+        android:textSize="12dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toTopOf="@id/user_icon"
+        app:layout_constraintStart_toEndOf="@id/user_icon"
+        app:layout_constraintEnd_toEndOf="@id/radio_user" />
+
+    <Button
+        android:id="@+id/radio_junkshop_owner"
+        android:layout_width="300dp"
+        android:layout_height="130dp"
+        android:background="@drawable/blue_outline_light_background"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/radio_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/junkshop_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/img_3"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="@id/radio_junkshop_owner"
+        app:layout_constraintStart_toStartOf="@id/radio_junkshop_owner" />
+
+    <TextView
+        android:id="@+id/junkshop_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="Junkshop Owners"
+        android:textColor="#296EE6"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="@id/radio_junkshop_owner"
+        app:layout_constraintStart_toEndOf="@id/junkshop_icon" />
+
+    <TextView
+        android:id="@+id/junkshop_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_reg"
+        android:text="List recyclables, update prices\nand connect with users\nfor recycling and purchases."
+        android:textColor="#296EE6"
+        android:textSize="12dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/junkshop_text"
+        app:layout_constraintStart_toStartOf="@id/junkshop_text"
+        app:layout_constraintEnd_toEndOf="@id/radio_junkshop_owner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

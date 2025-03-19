@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    tools:context=".junkshop.JunkshopOwnerProfile">
+
+    <LinearLayout
+        android:id="@+id/chat_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="12dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/return_button"
+            android:layout_width="36dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:src="@drawable/return_arrow"
+            android:contentDescription="Exit"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textSize="25sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="106dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ProfileImage"
+        android:layout_width="112dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chat_toolbar" />
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Fretch Hugo"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ProfileImage"/>
+
+    <TextView
+        android:id="@+id/profile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="fretch123@gmail.com"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name"/>
+
+    <!-- PICK UP REQUESTS -->
+    <LinearLayout
+        android:id="@+id/pickup_requests"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:background="@color/light_gray"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_email"
+        app:layout_constraintWidth_percent="0.9">
+
+        <ImageView
+            android:id="@+id/leftIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/truck"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/pickup_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pick up requests"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/rightIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/next_arrow"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- My Account -->
+    <LinearLayout
+        android:id="@+id/my_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:background="@color/light_gray"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pickup_requests"
+        app:layout_constraintWidth_percent="0.9">
+
+        <ImageView
+            android:id="@+id/account_leftIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/my_acc"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/my_acc_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="My Account"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/next_rightIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/next_arrow"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- Notification Settings -->
+    <LinearLayout
+        android:id="@+id/junkshop_notification"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:background="@color/light_gray"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_account"
+        app:layout_constraintWidth_percent="0.9">
+
+        <ImageView
+            android:id="@+id/notification_leftIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/notification_bell"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/notification_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Notification Settings"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/next_Icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/next_arrow"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- About Us -->
+    <LinearLayout
+        android:id="@+id/about_us"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:background="@color/light_gray"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/junkshop_notification"
+        app:layout_constraintWidth_percent="0.9">
+
+        <ImageView
+            android:id="@+id/about_Us"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/about_us_icon"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/about_us_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="About Us"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/next_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/next_arrow"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- Logout -->
+    <LinearLayout
+        android:id="@+id/logout_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:background="@color/light_gray"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_us"
+        app:layout_constraintWidth_percent="0.9">
+
+        <ImageView
+            android:id="@+id/exit_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/exit_btn"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/exit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Exit"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/exit_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/next_arrow"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+    android:id="@+id/bottom_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/primary_color"
+    app:itemIconTint="@color/nav_item_icon_tint"
+    app:itemTextColor="@color/white"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:menu="@menu/bottom_nav2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

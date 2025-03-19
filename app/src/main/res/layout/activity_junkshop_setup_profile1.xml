@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".junkshop.JunkshopSetupProfile1">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvSetupBusinessProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Setup Business Profile"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_reg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="24dp" />
+
+    <!-- Step Progress -->
+    <TextView
+        android:id="@+id/tvStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Step 1 of 2"
+        android:fontFamily="@font/poppins_reg"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvSetupBusinessProfile"
+        app:layout_constraintStart_toStartOf="@id/tvSetupBusinessProfile"
+        android:layout_marginTop="4dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:progress="50"
+        app:layout_constraintTop_toBottomOf="@id/tvStep"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="24dp"
+        android:background="@color/gray"/>
+
+    <TextView
+        android:id="@+id/complete_profile_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/transpa"
+        android:text="Complete your profile to get started"
+        android:textColor="#000000"
+        android:fontFamily="@font/poppins_reg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"/>
+
+
+    <!-- Profile Image -->
+    <ImageView
+        android:id="@+id/ivProfileImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/img_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/complete_profile_text" />
+
+    <!-- Button Below Profile Image -->
+    <Button
+        android:id="@+id/upload_junkshop_profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit profile image"
+        android:textColor="#0D99FF"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_reg"
+        android:background="@color/transpa"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/ivProfileImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+
+    <!-- Junkshop Name -->
+    <TextView
+        android:id="@+id/JunkshopNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Junkshop Name"
+        android:textColor="@color/primary_color"
+        android:fontFamily="@font/poppins_reg"
+        app:layout_constraintTop_toBottomOf="@id/upload_junkshop_profile_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextJunkshopName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_black_outline"
+        android:padding="12dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/JunkshopNameTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <!-- Address -->
+    <TextView
+        android:id="@+id/AddressTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:fontFamily="@font/poppins_reg"
+        android:textColor="@color/primary_color"
+        app:layout_constraintTop_toBottomOf="@id/editTextJunkshopName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:id="@+id/editTextAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_black_outline"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:text="Select Address"
+        android:fontFamily="@font/poppins_reg"
+        android:textColorHint="#808080"
+        android:gravity="center_vertical"
+        android:drawableEnd="@drawable/baseline_location_on_24"
+        android:focusable="false"
+        android:clickable="true"
+        app:layout_constraintTop_toBottomOf="@id/AddressTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintWidth_percent="0.9" />
+
+
+    <!-- Contact Number -->
+    <TextView
+        android:id="@+id/ContactNumberTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Number"
+        android:fontFamily="@font/poppins_reg"
+        android:textColor="@color/primary_color"
+        app:layout_constraintTop_toBottomOf="@id/editTextAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="26dp" />
+
+    <EditText
+        android:id="@+id/editTextContactNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_black_outline"
+        android:padding="12dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/ContactNumberTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <!-- Operating Hours -->
+    <TextView
+        android:id="@+id/OperatingHoursTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Operating Hours"
+        android:fontFamily="@font/poppins_reg"
+        android:textColor="@color/primary_color"
+        app:layout_constraintTop_toBottomOf="@id/editTextContactNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="26dp" />
+
+    <EditText
+        android:id="@+id/editTextOperatingHours"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_black_outline"
+        android:padding="12dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/OperatingHoursTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintWidth_percent="0.9"
+        android:drawableEnd="@drawable/baseline_access_time_24"/>
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/next_junkshop_setup_btn"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/primary_color"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_reg"
+        android:background="@drawable/button2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="26dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

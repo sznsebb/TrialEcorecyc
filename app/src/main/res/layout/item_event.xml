@@ -1,0 +1,99 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="310dp"
+    android:padding="5dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="310dp"
+        android:background="@drawable/image_background_curve"
+        android:elevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="25dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/event_image"
+            android:layout_width="350dp"
+            android:layout_height="170dp"
+            android:contentDescription="Event Image"
+            android:scaleType="centerCrop"
+            android:background="@drawable/curved_image_bg"/>
+
+        <TextView
+            android:id="@+id/cleanup_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/event_image"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:text="Cleanup Event Name"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_reg"/>
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cleanup_name"
+            android:paddingLeft="10dp"
+            android:text="Location"
+            android:fontFamily="@font/poppins_reg"/>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:paddingLeft="10dp"
+            android:text="Description"
+            android:fontFamily="@font/poppins_reg"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:paddingLeft="10dp"
+            android:text="Date"
+            android:fontFamily="@font/poppins_reg"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date"
+            android:paddingLeft="10dp"
+            android:text="Time" />
+
+        <Button
+            android:id="@+id/joinEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="200dp"
+            android:background="@color/transpa"
+            android:text="Join Event"
+            android:textColor="@color/primary_color"
+            android:fontFamily="@font/poppins_reg"/>
+
+
+        <Button
+            android:id="@+id/deleteEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="240dp"
+            android:background="@color/transpa"
+            android:text="Delete"
+            android:textColor="@color/red"
+            android:fontFamily="@font/poppins_reg" />
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

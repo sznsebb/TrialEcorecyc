@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context=".profile.UserProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title: "Profile" -->
+        <TextView
+            android:id="@+id/profileText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:fontFamily="@font/poppins_reg"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp" />
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img_5"
+            app:layout_constraintTop_toBottomOf="@id/profileText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="45dp" />
+
+        <!-- Profile Name -->
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ariana Grande"
+            android:fontFamily="@font/poppins_reg"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/profile_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp" />
+
+        <!-- Profile Email -->
+        <TextView
+            android:id="@+id/profile_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="grandeariana@gmail.com"
+            android:fontFamily="@font/poppins_reg"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/profile_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- White Container (ScrollView Content) -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/profile_email"
+            android:background="@drawable/edittextbackground2"
+            android:elevation="5dp">
+
+            <!-- My Orders -->
+            <ImageButton
+                android:id="@+id/my_orders_btn"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/transpa"
+                android:scaleType="fitCenter"
+                android:src="@drawable/my_orders"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- My Listings -->
+            <ImageButton
+                android:id="@+id/my_listings_btn"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="-22dp"
+                android:backgroundTint="@color/transpa"
+                android:scaleType="fitCenter"
+                android:src="@drawable/my_listings"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_orders_btn" />
+
+            <!-- Settings -->
+            <ImageButton
+                android:id="@+id/settings_btn"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="-20dp"
+                android:backgroundTint="@color/transpa"
+                android:scaleType="fitCenter"
+                android:src="@drawable/settings"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_listings_btn" />
+
+            <!-- Rate Us (Star Icon) -->
+            <ImageButton
+                android:id="@+id/rateus_btn"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="-10dp"
+                android:backgroundTint="@color/transpa"
+                android:scaleType="fitCenter"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/settings_btn" />
+
+            <!-- Rate Us (Button Text) -->
+            <Button
+                android:id="@+id/rateus_btn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-25dp"
+                android:background="@color/transpa"
+                android:text="Rate Us"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/rateus_btn"
+                app:layout_constraintTop_toBottomOf="@id/settings_btn" />
+
+            <!-- Logout -->
+            <ImageButton
+                android:id="@+id/logout_btn"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="0dp"
+                android:backgroundTint="@color/transpa"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rateus_btn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
