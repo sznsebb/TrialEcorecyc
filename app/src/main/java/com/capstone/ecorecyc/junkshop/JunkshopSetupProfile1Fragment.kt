@@ -8,7 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.ecorecyc.R
 
-class JunkshopSetupProfile1 : AppCompatActivity() {
+class JunkshopSetupProfile1Fragment : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

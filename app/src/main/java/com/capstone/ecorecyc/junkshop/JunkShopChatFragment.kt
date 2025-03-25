@@ -7,11 +7,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.capstone.ecorecyc.R
 
-class JunkShopNotification : AppCompatActivity() {
+class JunkShopChatFragment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_junk_shop_notification)
-
+        setContentView(R.layout.activity_junk_shop_chat)
     }
 }

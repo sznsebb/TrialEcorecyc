@@ -9,7 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.capstone.ecorecyc.R
 
-class JunkshopOwnerProfile : AppCompatActivity() {
+class JunkshopOwnerProfileFragment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -32,7 +32,7 @@ class JunkshopOwnerProfile : AppCompatActivity() {
         sharedPreferences.edit().clear().apply()
 
         // Navigate back to the dashboard
-        val intent = Intent(this, JunkShopDashboard::class.java)
+        val intent = Intent(this, JunkShopDashboardFragment::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
         finish()

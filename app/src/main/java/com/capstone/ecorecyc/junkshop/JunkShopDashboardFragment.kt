@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.capstone.ecorecyc.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class JunkShopDashboard : AppCompatActivity() {
+class JunkShopDashboardFragment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,7 +19,7 @@ class JunkShopDashboard : AppCompatActivity() {
 
         // Set click listener to open AddRecyclablePrice activity
         fab.setOnClickListener {
-            val intent = Intent(this, AddRecyclablePrice::class.java)
+            val intent = Intent(this, AddRecyclablePriceFragment::class.java)
             startActivity(intent)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out) // Smooth fade-in transition
         }

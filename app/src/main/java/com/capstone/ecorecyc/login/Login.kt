@@ -13,9 +13,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.capstone.ecorecyc.R
 import com.capstone.ecorecyc.dashboard.Navbar
-import com.capstone.ecorecyc.junkshop.JunkShopDashboard
-import com.capstone.ecorecyc.junkshop.JunkshopSetupProfile1
-import com.capstone.ecorecyc.junkshop.JunkshopSetupProfile2
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
